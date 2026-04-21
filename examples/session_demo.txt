@@ -1,0 +1,44 @@
+23:14:02 INFO  agent.graph          | agent: requesting tool 'create_event' with {'title': 'María', 'start_iso': '2026-04-22T10:00', 'duration_minutes': 60}
+23:14:02 INFO  agent.graph          | tool: 'create_event' → Event #1 'María' created 2026-04-22T10:00 → 2026-04-22T11:00.
+23:14:02 INFO  agent.graph          | agent: final reply (iter=2)
+you   : Agenda una reunión con María mañana a las 10h
+jarvis: Listo. Event #1 'María' created 2026-04-22T10:00 → 2026-04-22T11:00.
+
+23:14:02 INFO  agent.graph          | agent: requesting tool 'list_agenda' with {}
+23:14:02 INFO  agent.graph          | tool: 'list_agenda' → #1 2026-04-22T10:00 — María
+23:14:02 INFO  agent.graph          | agent: final reply (iter=2)
+you   : Muéstrame mi agenda
+jarvis: Listo. #1 2026-04-22T10:00 — María
+
+23:14:02 INFO  agent.graph          | agent: requesting tool 'create_note' with {'content': ': comprar regalo de cumpleaños del equipo', 'tag': ''}
+23:14:02 INFO  agent.graph          | tool: 'create_note' → Note #1 created with tag 'none'.
+23:14:02 INFO  agent.graph          | agent: final reply (iter=2)
+you   : Apunta: comprar regalo de cumpleaños del equipo
+jarvis: Listo. Note #1 created with tag 'none'.
+
+23:14:02 INFO  agent.graph          | agent: requesting tool 'list_notes' with {}
+23:14:02 INFO  agent.graph          | tool: 'list_notes' → #1 [none] : comprar regalo de cumpleaños del equipo
+23:14:02 INFO  agent.graph          | agent: final reply (iter=2)
+you   : Mis notas
+jarvis: Listo. #1 [none] : comprar regalo de cumpleaños del equipo
+
+23:14:02 INFO  agent.graph          | agent: requesting tool 'create_reminder' with {'text': 'Recuérdame enviar el informe mañana a las 9h', 'due_at_iso': '2026-04-22T09:00'}
+23:14:02 INFO  agent.graph          | tool: 'create_reminder' → Reminder #1 set for 2026-04-22T09:00.
+23:14:02 INFO  agent.graph          | agent: final reply (iter=2)
+you   : Recuérdame enviar el informe mañana a las 9h
+jarvis: Listo. Reminder #1 set for 2026-04-22T09:00.
+
+23:14:02 INFO  agent.graph          | agent: requesting tool 'review_code' with {'code': "print('hola')\nexcept:\n    pass\n"}
+23:14:02 INFO  agent.graph          | tool: 'review_code' → Review findings:
+- Uses print() for output; consider `logging` in production code.
+- Bare `except:` catches everything; 
+23:14:02 INFO  agent.graph          | agent: final reply (iter=2)
+you   : Revisa este código: ```python
+print('hola')
+except:
+    pass
+```
+jarvis: Listo. Review findings:
+- Uses print() for output; consider `logging` in production code.
+- Bare `except:` catches everything; prefer specific exceptions.
+
