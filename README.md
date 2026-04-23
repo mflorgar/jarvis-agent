@@ -20,7 +20,7 @@ Before you install anything, you can try a lightweight web demo of
 this assistant. Her name is **Eva** — the public-facing, browser-only
 version of this project. Same personality, no tools, no install.
 
-- **Live demo**: https://eva-mflorgar.vercel.app *(update with real URL)*
+- **Live demo**: http://eva-demo-sable.vercel.app/
 - **Demo repo**: https://github.com/mflorgar/eva-demo
 
 Eva is what you show people when you don't want to walk them through a
